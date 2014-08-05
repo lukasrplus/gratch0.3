@@ -1,4 +1,5 @@
 class GratchesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   before_action :set_gratch, only: [:show, :edit, :update, :destroy]
 
   # GET /gratches
