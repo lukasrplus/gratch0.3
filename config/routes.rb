@@ -1,4 +1,9 @@
 Gratch03::Application.routes.draw do
+
+  devise_for :users
+  root :to => 'gratches#index'
+
+
   resources :gratches
 
   # The priority is based upon order of creation: first created -> highest priority.
